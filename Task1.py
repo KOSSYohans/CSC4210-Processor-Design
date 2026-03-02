@@ -14,9 +14,9 @@ def process_data(input_str, format_sel):
     
     # Detect overflow and apply saturation logic
     if val > MAX_INT:
-        val = MAX_INT     # Clamp to MAX_INT32
-        overflow = 1      # Set overflow flag
-        saturated = 1     # Set saturated flag
+        val = MAX_INT     
+        overflow = 1      
+        saturated = 1  
     elif val < MIN_INT:
         val = MIN_INT
         overflow = 1
@@ -52,14 +52,14 @@ def process_data(input_str, format_sel):
     return value_out, overflow, saturated   # Return converted value, overflow flag, and saturated flag
 
 
-# Unit Test Suite
+# Testing
 if __name__ == "__main__":
     tests = [
-        ("123", "DEC"),          # Positive value
-        ("0", "BIN"),            # Zero
-        ("-123", "HEX"),         # Negative value
-        ("2147483647", "DEC"),   # MAX_INT32
-        ("-2147483648", "HEX"),  # MIN_INT32
+        ("123", "DEC"),
+        ("0", "BIN"),
+        ("-123", "HEX"),         
+        ("2147483647", "DEC"),   
+        ("-2147483648", "HEX"),  
         ("2147483648", "BIN"),   # MAX_INT32 + 1 (Overflow)
         ("-2147483649", "DEC")   # MIN_INT32 - 1 (Overflow)
     ]
@@ -67,4 +67,5 @@ if __name__ == "__main__":
     print(f"{'Input':<12} {'Fmt':<5} {'Value Out':<35} {'OVF':<4} {'SAT':<4}")
     for inp, fmt in tests:
         v, o, s = process_data(inp, fmt)
+
         print(f"{inp:<12} {fmt:<5} {v:<35} {o:<4} {s:<4}")
