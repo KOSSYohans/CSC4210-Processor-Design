@@ -64,3 +64,18 @@ Ensure Python 3 is installed To run the code.
 
 Can video recordings be uploaded to YouTube? I prefer not.
 
+**Task 4 Single-Cycle Processor Design (AND / OR)**
+Input values are set inside processor.py in the run() call at the bottom:
+cpu.run(A=0b1, B=0b1, C=0b0, D=0b1)
+Change A, B, C, D to any 32-bit values to test different inputs.
+
+Expected Output: Instruction execution trace, Control signals per instruction, Register value after each instruction, Final result Y stored in t0.
+
+(NOT operation is not a separate instruction)
+The andn instruction sets an invert_a control signal in the ALU, which inverts the first operand before the AND operation.
+
+How to run:
+Requirement-Python 3.x (no library needed)
+python processor.py / just put all the files in one folder and open inside vscode and run processor.
+
+
