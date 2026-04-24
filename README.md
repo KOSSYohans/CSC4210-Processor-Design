@@ -66,6 +66,7 @@ Ensure Python 3 is installed To run the code.
 Can video recordings be uploaded to YouTube? I prefer not.
 
 **Task 4 Single-Cycle Processor Design (AND / OR)**
+
 Input values are set inside processor.py in the run() call at the bottom:
 cpu.run(A=0b1, B=0b1, C=0b0, D=0b1)
 Change A, B, C, D to any 32-bit values to test different inputs.
