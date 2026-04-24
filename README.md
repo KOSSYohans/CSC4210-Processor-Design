@@ -6,7 +6,8 @@ Course: CSC4210 - Computer Architecture
 
 
 
-**Task 1 Data Systems**:
+**Task 1 Data Systems**
+
 Process 32-bit signed integers, implementing Two's Complement representation and overflow/saturation logic.
 Supports Decimal, Binary, and Hexadecimal formatting.
 
